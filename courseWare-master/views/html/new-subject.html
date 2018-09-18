@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Topic Name</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../../public/stylesheets/style.css">
+</head>
+
+<body>
+  <div class="container mx-auto my-2 row">
+      <form class="col-md-8">
+          <div class="form-group">
+            <label for="subjectName">Subject Name</label>
+            <input name="subjectName" type="text" class="form-control" id="subjectName" placeholder="Subject Name">
+          </div>
+          <div class="form-group">
+            <label for="semester">Semester</label>
+            <select class="custom-select" name="semester" id="semester">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+            </select>
+          </div>
+          <div class="form-group">
+              <label for="branch">Branch</label>
+              <select class="custom-select" name="branch" id="branch">
+                <option value="cse">Computer Science</option>
+                <option value="ece">Electrical and Electronics Engineering</option>
+                <option value="mech">Mechanical Engineering</option>
+                <option value="cve">Civil Engineering</option>
+                <option value="che">Chemical Engineering</option>
+              </select>
+            </div>
+            <input type="hidden" value="[]" id="referencesInput"name="references">
+            <input type="hidden" value="[]" id="teachernotesInput"name="teachernotes">
+            <input type="hidden" value="[]" id="practicalsInput"name="practicals">
+            <input type="hidden" value="[]" id="previousyearquestionpapersInput"name="previousyearquestionpapers">
+            <div class="content">
+              <div id="references"><div>References</div><hr></div>
+              <div id="teachernotes"><div>Teacher Notes</div><hr></div>
+              <div id="practicals"><div>Practicals</div><hr></div>
+              <div id="previousyearquestionpapers"><div>Previous Year Question Paper</div><hr></div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="contentType">Content Type</label>
+                <select class="custom-select" name="contentType" id="contentType">
+                  <option value="references">references</option>
+                  <option value="teachernotes">teachernotes</option>
+                  <option value="practicals">practicals</option>
+                  <option value="previousyearquestionpapers">previousyearquestionpapers</option>
+                </select>
+            </div>
+            <div class="form-group">            
+                <label for="name">Enter Content Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter Content Name">
+            </div>
+            <div class="form-group">            
+                <label for="url">Enter URL</label>
+                <input type="url" class="form-control" id="url" placeholder="Enter URL">
+            </div>  
+            <button class="btn btn-primary" id="add">Add</button>
+
+        </div>
+  </div>
+  <script src="../../public/javascripts/add-subject.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+extends layout
+block content
+	- function titleCase(str){
+	-     return str.toLowerCase().split(' ').map(function (word) {
+	-         return (word.charAt(0).toUpperCase() + word.slice(1));
+	-     }).join(' ');
+	- }
+	.container-fluid.no-gutters.my-3.row
+		.col-lg-9.col-md-8
+			#select-branch.rounded-top.font-weight-bold.mx-2.px-3
+				a(href='/'+branch+'/')
+					.py-2= branchName
+			#subject-name-bar.rounded-bottom.mx-2.px-3
+				.py-1= titleCase(subject.name)
+
+			each chapter in subject.chapters	
+				#select-branch.rounded-top.font-weight-bold.mt-3.mx-2.px-3
+					.py-1= titleCase(chapter.name)
+				#subject-name-bar.rounded-bottom.font-weight-normal.mb-3.mx-2.px-3
+					.py-3
+						each topic in chapter.topics
+							a(href='/'+branch+'/'+sem+'/'+subject._id+'/'+chapter._id+'/'+topic._id+'/')
+								span.topic-item.rounded.py-1.px-1= titleCase(topic.name) + ","
+
+		.col-lg-3.col-md-4
+			#select-branch.rounded-top.font-weight-bold.mx-2.px-3
+				.py-1
+					| Teacher Notes
+			#subject-name-bar.rounded-bottom.font-weight-normal.mx-2.px-3.py-2
+				each teacherNote in subject.teacher_notes
+					a(href=teacherNote.url)
+						.py-2.px-2.rounded.tab-item= teacherNote.name
+			#select-branch.rounded-top.font-weight-bold.mt-2.mx-2.px-3
+				.py-1
+					| Previous Year Question Papers
+			#subject-name-bar.rounded-bottom.font-weight-normal.mx-2.px-3.py-2
+				each previous_question_paper in subject.previous_question_papers
+					a(href=previous_question_paper.url)
+						.py-2.px-2.rounded.tab-item= previous_question_paper.name
+			#select-branch.rounded-top.font-weight-bold.mt-2.mx-2.px-3
+				.py-1
+					| Practicals
+			#subject-name-bar.rounded-bottom.font-weight-normal.mx-2.px-3.py-2
+				each practical in subject.practicals
+					a(href=practical.url)
+						.py-2.px-2.rounded.tab-item= practical.name
+			#select-branch.rounded-top.font-weight-bold.mt-2.mx-2.px-3
+				.py-1
+					| Reference Books
+			#subject-name-bar.rounded-bottom.font-weight-normal.mx-2.px-3.py-2
+				each reference in subject.references
+					a(href=reference.url)
+						.py-2.px-2.rounded.tab-item= reference.name

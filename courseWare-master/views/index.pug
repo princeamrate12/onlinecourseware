@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    #select-branch.font-weight-bold.container.rounded-top
+        .mt-3.py-3 Please select your branch to continue
+    #branches.container.p-3.rounded-bottom
+      .row.no-gutters
+        .col-lg-4.col-md-6
+          .branch-card.rounded.m-2
+            a(href="/cse/")
+              .branch-card-title.p-3.text-center Computer Science
+        .col-lg-4.col-md-6
+          .branch-card.rounded.m-2
+            a(href="/ece/")
+              .branch-card-title.p-3.text-center Electrical and Electronics Engineering
+        .col-lg-4.col-md-6
+          .branch-card.rounded.m-2
+            a(href="/mech/")
+              .branch-card-title.p-3.text-center Mechanical Engineering
+        .col-lg-4.col-md-6
+          .branch-card.rounded.m-2
+            a(href="/cve/")
+              .branch-card-title.p-3.text-center Civil Engineering
+        .col-lg-4.col-md-6
+          .branch-card.rounded.m-2
+            a(href="/che/")
+              .branch-card-title.p-3.text-center Chemical Engineering

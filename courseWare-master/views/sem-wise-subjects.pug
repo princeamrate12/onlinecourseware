@@ -1,0 +1,24 @@
+extends layout
+
+block content
+	- function titleCase(str){
+	-     return str.toLowerCase().split(' ').map(function (word) {
+	-         return (word.charAt(0).toUpperCase() + word.slice(1));
+	-     }).join(' ');
+	- }
+	#select-branch.container.rounded-top.font-weight-bold
+		.mt-3.py-3= title
+	#branches.container.rounded-bottom.p-3
+		.row.no-gutters
+			each sem in [1,2,3,4,5,6,7,8]
+				.col-lg-4.col-md-6
+					.sem-card.rounded.m-2.p-3
+						.branch-card-title.font-weight-bold= 'Semester ' + sem 
+						hr
+						.subject-list
+							each subject in subjects
+								if (subject.sem == sem)
+									a(href='/'+branch+'/'+sem+'/'+subject._id+'/')
+										.subject-name.px-4.rounded
+											.py-1=titleCase(subject.name)
+										hr

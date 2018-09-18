@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	- function titleCase(str){
+	-     return str.toLowerCase().split(' ').map(function (word) {
+	-         return (word.charAt(0).toUpperCase() + word.slice(1));
+	-     }).join(' ');
+	- }
+	#select-branch.container.rounded-top.font-weight-bold
+		.mt-3.py-3= title
+	#branches.container.rounded-bottom.p-3
+		.sem-card.rounded.font-weight-bold.m-2.p-3
+			.branch-card-title= 'Semester ' + sem 
+			hr
+			.subject-list
+				each subject in subjects
+					a(href='/'+branch+'/'+sem+'/'+subject._id+'/')
+						.subject-name.my-2.py-2= titleCase(subject.name)

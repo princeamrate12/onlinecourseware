@@ -1,0 +1,91 @@
+body{
+  background: #e1e2e1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+a{
+  color: #000000;
+  text-decoration: none;
+}
+a:hover{
+  color: #000;
+  text-decoration: none;
+}
+hr{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-top: 1px solid rgba(0,0,0,.5);
+}
+.navigator{
+  background: #000000;
+}
+.signInDrop {
+  top: 80%;
+  left: -100px;
+}
+.btn-primary {
+  color: #000;
+  background-color: #ff9800;
+  border-color: #c66900;
+}
+.btn-primary:hover {
+  color: #000;
+  background-color: #ffc947;
+  border-color: #c66900;
+}
+.form-control:focus {
+  border-color: #ffc947;
+  box-shadow: 0px 0px 0px 0.2rem rgba(141, 141, 141, 0.25);
+}
+.nav-tabs {
+  border-bottom: 1px solid #ffc947;
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+  border-color: #ffc947 #ffc947 #ffc947;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: #495057;
+  background-color: #fff;
+  border-color: #ffc947 #ffc947 #fff;
+}
+#select-branch{
+  background: #ff9800;
+  font-size: 1em;
+}
+#branches{
+  background: #fff;
+}
+.branch-card, .sem-card{
+  background: #ff9800;
+}
+.subject-name:hover{
+  color: #fff;
+}
+.branch-card:hover{
+  background: #ffc947;
+}
+.branch-card-title{
+  font-size: 1em;
+  color: #000;
+}
+#subject-name-bar, .topic-material{
+  background: #fff;
+}
+.tab-item:hover{
+  color: #000;
+  background: #ff9800;
+}
+.topic-item:hover{
+  background: #ff9800;
+  color: #000;
+}
+.video-content {
+  position:relative;
+  padding-top:56.25%;
+}
+.video-frame{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Material Components for the web</title>
+    <link rel="stylesheet" href="../../../node_modules/material-components-web/dist/material-components-web.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .my-card__media {
+            background-image: url("../../../public/images/16-9.jpg");
+        }
+
+        .my-card__primary {
+            padding: 1rem;
+        }
+
+        .my-card__title {
+            margin: 0;
+        }
+
+        .my-card__subtitle {
+            color: rgba(0, 0, 0, 0.54);
+            color: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54));
+            margin: 0;
+        }
+
+        .my-card__secondary {
+            color: rgba(0, 0, 0, 0.54);
+            color: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54));
+            padding: 0 1rem 8px 1rem;
+        }
+    </style>
+</head>
+
+<body class="mdc-typography">
+    <header class="mdc-top-app-bar mdc-top-app-bar--short">
+        <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <a href="#" class="material-icons mdc-top-app-bar__navigation-icon">menu</a>
+                <span class="mdc-top-app-bar__title">Online Course Ware</span>
+            </section>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                <a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Download" alt="Download">more_vert</a>
+            </section>
+        </div>
+    </header>
+    <main>
+        <div class="mdc-toolbar-fixed-adjust"></div>
+        <section class="hero">
+            <div class="mdc-layout-grid">
+                <div class="mdc-layout-grid__inner">
+                    <div class="mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-12-mobile">
+                        <div class="mdc-card">
+                            <a class="mdc-card__primary-action mdc-ripple-upgraded" href="#">
+                                <div class="my-card__media mdc-card__media mdc-card__media--16-9"></div>
+                                <div class="my-card__primary">
+                                    <h2 class="my-card__title mdc-typography--headline6">Our Changing Planet</h2>
+                                    <h3 class="my-card__subtitle mdc-typography--subtitle2">by Kurt Wagner</h3>
+                                </div>
+                                <div class="my-card__secondary mdc-typography--body2">
+                                    Visit ten places on our planet that are undergoing the biggest changes today.
+                                </div>
+                            </a>
+                            <div class="mdc-card__actions">
+                                <div class="mdc-card__action-buttons">
+                                    <button class="mdc-button mdc-card__action mdc-card__action--button mdc-ripple-upgraded">Read</button>
+                                    <button class="mdc-button mdc-card__action mdc-card__action--button mdc-ripple-upgraded">Bookmark</button>
+                                </div>
+                                <div class="mdc-card__action-icons">
+                                    <i tabindex="0" title="Share" class="material-icons mdc-card__action mdc-card__action--icon mdc-ripple-surface mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+                                        role="button" style="--mdc-ripple-fg-size:28.800009155273436px; --mdc-ripple-left:10px; --mdc-ripple-top:10px; --mdc-ripple-fg-scale:1.6666666666666667;"
+                                        data-mdc-ripple-is-unbounded="">share</i>
+                                    <i tabindex="0" title="More options" class="material-icons mdc-card__action mdc-card__action--icon mdc-ripple-surface mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+                                        role="button" style="--mdc-ripple-fg-size:28.799999999999997px; --mdc-ripple-left:10px; --mdc-ripple-top:10px; --mdc-ripple-fg-scale:1.6666666666666667;"
+                                        data-mdc-ripple-is-unbounded="">more_vert</i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell"></div>
+                    <div class="mdc-layout-grid__cell"></div>
+                    <div class="mdc-layout-grid__cell"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../../../node_modules/material-components-web/dist/material-components-web.js"></script>
+    <script>mdc.autoInit(); // Instantiation
+        var topAppBarElement = document.querySelector('#topAppBar');
+        var topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(topAppBarElement);
+    </script>
+</body>
+
+</html>

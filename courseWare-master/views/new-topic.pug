@@ -1,0 +1,43 @@
+extends layout
+
+block content
+	script subjects = !{subjects};
+	.container.mx-auto.my-2.row
+		form.col-md-6(method="post" action="/newcourse/newtopic")
+			.form-group
+				label(for="subject") Subject Name
+				select#subject.custom-select(name="subject")
+					option(selected="true") Select Subject
+			.form-group
+				label(for="chapter") Chapter Name
+				select#chapter.custom-select(name="chapter")
+					option(selected="true") Select Chapter
+			.form-group
+				label(for="name") Enter Topic Name
+				input#name.form-control(type="text" name="topic" placeholder="Topic Name")
+			input#notesInput(type="hidden" value="[]" name="notes")
+			input#videosInput(type="hidden" value="[]" name="videos")
+			input#summaryInput(type="hidden" value="[]" name="summary")
+			.content
+				#notes
+					div Notes
+					hr
+				#videos
+					div Videos
+					hr
+				#summary
+					div Summary
+					hr
+			button.btn.btn-primary(type="submit") Submit
+		.col-md-6
+			.form-group
+				label(for="contentType") Content Type
+				select#contentType.custom-select(name="contentType")
+					option(value="notes") notes
+					option(value="videos") videos
+					option(value="summary") summary
+			.form-group
+				label(for="name") Enter Content
+				textarea#content.form-control(rows="10" placeholder="Enter Content")
+			button#add.btn.btn-primary Add
+	script(src="/javascripts/add-topic.js")

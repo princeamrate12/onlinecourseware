@@ -1,0 +1,27 @@
+extends layout
+
+block content
+	- function titleCase(str){
+	-     return str.toLowerCase().split(' ').map(function (word) {
+	-         return (word.charAt(0).toUpperCase() + word.slice(1));
+	-     }).join(' ');
+	- }
+	.container.mx-auto.my-2.row
+		form.col-md-8(method="post" action="/newcourse/newchapter")
+			.form-group
+				label(for="subject") Subject Name
+				select#subject.custom-select(name="subject")
+					each subject in subjects
+						option(value=subject._id)= titleCase(subject.name)
+			input#chaptersInput(type="hidden" value="[]" name="chapters")
+			.content
+				#chapters
+					div Chapters
+					hr
+			button.btn.btn-primary(type="submit") Submit
+		.col-md-4
+			.form-group
+				label(for="name") Enter Chapter Name
+				input#name.form-control(type="text" placeholder="Chapter Name")
+			button#add.btn.btn-primary Add
+	script(src="/javascripts/add-chapter.js")
